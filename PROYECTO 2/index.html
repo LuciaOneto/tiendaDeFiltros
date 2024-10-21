@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="index.js" type="module" defer></script>
+
+    <title>Tienda de Zapatillas</title>
+  </head>
+  <body>
+    <header>
+      <img src="./assets/logo.png" alt="Logo Tienda Zapatillas" />
+      <nav>
+        <ul class="nav-list">
+          <li><a href="#">Hombre</a></li>
+          <li><a href="#">Mujer</a></li>
+          <li><a href="#">Niño</a></li>
+          <li><a href="#">Ofertas</a></li>
+        </ul>
+      </nav>
+      <div id="iconos">
+        <img src="./assets/🦆 icon _User avatar_.png" alt="Usuario" />
+        <img
+          src="./assets/🦆 icon _shopping basket_.png"
+          alt="Carrito de Compras"
+        />
+        <img
+          id="filter-toggle"
+          src="./assets/🦆 icon _filter_.png"
+          alt="Filtros"
+        />
+      </div>
+    </header>
+
+    <main>
+      <!-- Modal de filtros -->
+      <div id="filter-modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <form id="filter-form">
+            <label for="category">Categoría:</label>
+            <select id="category">
+              <option value="">Todas</option>
+              <option value="senderismo">Senderismo</option>
+              <option value="running">Running</option>
+            </select>
+            <br />
+            <label for="brand">Marca:</label>
+            <select id="brand">
+              <option value="">Todas</option>
+              <option value="reebook">Reebook</option>
+              <option value="nike">Nike</option>
+              <option value="asis">Asis</option>
+            </select>
+            <br />
+            <label for="price">Precio máximo:</label>
+            <input type="number" id="price" placeholder="Precio máximo" />
+            <br />
+            <button type="button" id="apply-filters">Filtrar</button>
+            <button type="button" id="clear-filters">Borrar</button>
+          </form>
+        </div>
+      </div>
+
+      <section id="product-list"></section>
+      <div id="title">
+        <h4>PRODUCTOS DESTACADOS</h4>
+      </div>
+
+      <section id="box">
+        <div>
+          <img src="./assets/zapa18.jpg" alt="Zapatilla Nike" />
+          <h3 class="marca">Nike</h3>
+          <p class="categoria">Running</p>
+          <p class="price">150€</p>
+          <button>Comprar</button>
+        </div>
+        <div>
+          <img src="./assets/zapa19.jpg" alt="Zapatilla Reebook" />
+          <h3 class="marca">Reebook</h3>
+          <p class="categoria">Senderismo</p>
+
+          <p class="price">250€</p>
+          <button>Comprar</button>
+        </div>
+        <div>
+          <img src="./assets/zapa20.jpg" alt="Zapatilla Asis" />
+          <h3 class="marca">Asis</h3>
+          <p class="categoria">Running</p>
+
+          <p class="price">80€</p>
+          <button>Comprar</button>
+        </div>
+        <div>
+          <img src="./assets/zapa17.jpg" alt="Zapatilla NikeRunning" />
+          <h3 class="marca">Nike</h3>
+          <p class="categoria">Running</p>
+
+          <p class="price">170€</p>
+          <button>Comprar</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Proyecto Filtros - Lucia Oneto</p>
+    </footer>
+  </body>
+</html>
